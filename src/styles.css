@@ -18,3 +18,11 @@ html, body {
 .h100 {
     height: 100% !important;
 }
+
+progress-bar {
+    width: 100%;
+}
+
+.progress-outer {
+    margin: 0 !important;
+}

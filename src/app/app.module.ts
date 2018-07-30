@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {ProgressBarModule} from "angular-progress-bar"
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   imports: [
     BrowserModule,
     FlexLayoutModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    ProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
