@@ -1,98 +1,185 @@
-<section class="intro-banner">
-sd
-</section>
-<div class="navbar w100" fxLayout="row" fxLayoutAlign="space-evenly center">
-  <a href="">Home</a>
-  <a href="">About</a>
-  <a href="">Portfolio</a>
-  <a href="">Contact</a>
-</div>
-<section class="about" id="about">
-  <div class="section-header">
-    About
+<div class="page-container">
+  <section class="intro-banner" id="home" fxLayout="row" fxLayoutAlign="space-evenly center">
+    sd
+  </section>
+  <div class="navbar w100" fxLayout="row" fxLayoutAlign="space-evenly center" [ngClass]="{'fixed': FixedNavbar}" #navbar>
+    <a [ngx-scroll-to]="'#home'">Home</a>
+    <a [ngx-scroll-to]="'#about'">About</a>
+    <a [ngx-scroll-to]="'#experience'">Experience</a>
+    <a [ngx-scroll-to]="'#portfolio'">Portfolio</a>
+    <a [ngx-scroll-to]="'#contact'">Contact</a>
   </div>
-  <div class="ethics-container" fxLayout="row" fxLayoutAlign="space-evenly center">
-    <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <div class="hexagon">
-          <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="tachometer" size="3x"></fa></div>
-        </div>
-      <div class="title">Fast</div>
-      <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+  <section class="about charcoal" id="about">
+    <div class="section-header">
+      About
     </div>
-    <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <div class="hexagon">
-          <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="desktop" size="3x"></fa></div>
-        </div>
-      <div class="title">Responsive</div>
-      <div class="message">Fast loading times and lage free interaction, my highest priority</div>
-    </div>
-    <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <div class="hexagon">
-          <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="users" size="3x"></fa></div>
-        </div>
-      <div class="title">Intuitive</div>
-      <div class="message">Fast loading times and lage free interaction, my highest priority</div>
-    </div>
-    <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <div class="hexagon">
-          <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="rocket" size="3x"></fa></div>
-        </div>
-      <div class="title">Dynamic</div>
-      <div class="message">Fast loading times and lage free interaction, my highest priority</div>
-    </div>
-  </div>
-  <div class="info" fxLayout="column" fxLayoutAlign="space-evenly center">
-    <div class="main-skills w100" fxLayout="row" fxLayoutAlign="space-evenly center">
-        <div class="bio" fxFlex="50">
-            ss
+    <div class="ethics-container" fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
+          <div class="hexagon">
+            <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="tachometer" size="3x"></fa></div>
           </div>
-          <div class="skills" fxFlex>
-            <div class="bar-list">
-              <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
-                <div class="skill-title" fxFlex="20">
-                  HTML5/CSS
+        <div class="title">Fast</div>
+        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+      </div>
+      <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
+          <div class="hexagon">
+            <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="desktop" size="3x"></fa></div>
+          </div>
+        <div class="title">Responsive</div>
+        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+      </div>
+      <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
+          <div class="hexagon">
+            <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="users" size="3x"></fa></div>
+          </div>
+        <div class="title">Intuitive</div>
+        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+      </div>
+      <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
+          <div class="hexagon">
+            <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="rocket" size="3x"></fa></div>
+          </div>
+        <div class="title">Dynamic</div>
+        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+      </div>
+    </div>
+    <div class="info" fxLayout="column" fxLayoutAlign="space-evenly center">
+      <div class="main-skills w100" fxLayout="row" fxLayoutAlign="space-evenly center">
+          <div class="bio" fxFlex="50">
+              ss
+            </div>
+            <div class="skills" fxFlex>
+              <div class="bar-list">
+                <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
+                  <div class="skill-title" fxFlex="20">
+                    HTML5/CSS
+                  </div>
+                  <progress-bar [progress]="80" [color]="'#488aff'">
+                    </progress-bar>
                 </div>
-                <progress-bar [progress]="80" [color]="'#488aff'">
-                  </progress-bar>
-              </div>
-              <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
-                <div class="skill-title" fxFlex="20">
-                  Angular
+                <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
+                  <div class="skill-title" fxFlex="20">
+                    Angular 6
+                  </div>
+                  <progress-bar [progress]="60" [color]="'#488aff'">
+                    </progress-bar>
                 </div>
-                <progress-bar [progress]="70" [color]="'#488aff'">
-                  </progress-bar>
-              </div>
-              <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
-                <div class="skill-title" fxFlex="20">
-                  Python / Django
+                <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
+                  <div class="skill-title" fxFlex="20">
+                    Django
+                  </div>
+                  <progress-bar [progress]="60" [color]="'#488aff'">
+                    </progress-bar>
                 </div>
-                <progress-bar [progress]="70" [color]="'#488aff'">
-                  </progress-bar>
-              </div>
-              <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
-                <div class="skill-title" fxFlex="20">
-                  C++ / C
+                <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
+                  <div class="skill-title" fxFlex="20">
+                    Python
+                  </div>
+                  <progress-bar [progress]="70" [color]="'#488aff'">
+                    </progress-bar>
                 </div>
-                <progress-bar [progress]="50" [color]="'#488aff'">
-                  </progress-bar>
+                <div class="bar-outline" fxLayout="row" fxLayoutAlign="start center">
+                  <div class="skill-title" fxFlex="20">
+                    C++
+                  </div>
+                  <progress-bar [progress]="70" [color]="'#488aff'">
+                    </progress-bar>
+                </div>
               </div>
             </div>
+      </div>
+      <div class="other-skills w100" fxLayout="column" fxLayoutAlign="space-evenly center">
+        <h2>Other Skills</h2>
+        <div class="row1 w100" fxLayout="row" fxLayoutAlign="space-between center">
+          <i class="devicon-csharp-plain" placement="top" ngbTooltip="C#"></i>
+          <i class="devicon-c-plain" placement="top" ngbTooltip="C"></i>
+          <i class="devicon-docker-plain-wordmark" placement="top" ngbTooltip="Docker"></i>
+          <i class="devicon-github-plain-wordmark" placement="top" ngbTooltip="GitHub"></i>
+          <i class="devicon-heroku-original-wordmark" placement="top" ngbTooltip="Heroku"></i>
+          <i class="devicon-jquery-plain-wordmark" placement="top" ngbTooltip="jQuery"></i>
+          <i class="devicon-mongodb-plain-wordmark" placement="top" ngbTooltip="MongoDB"></i>
+          <i class="devicon-nodejs-plain" placement="top" ngbTooltip="Node.js"></i>
+        </div>
+        <div class="row2 w100" fxLayout="row" fxLayoutAlign="space-between center">
+          <i class="devicon-bootstrap-plain-wordmark" placement="bottom" ngbTooltip="Bootstrap"></i>
+          <i class="devicon-java-plain-wordmark" placement="bottom" ngbTooltip="Java"></i>
+          <i class="devicon-swift-plain" placement="bottom" ngbTooltip="Swift"></i>
+          <i class="devicon-visualstudio-plain" placement="bottom" ngbTooltip="Visual Code"></i>
+          <i class="devicon-wordpress-plain-wordmark" placement="bottom" ngbTooltip="Wordpress"></i>
+          <i class="devicon-sass-original" placement="bottom" ngbTooltip="Sass"></i>
+          <i class="devicon-typescript-plain" placement="bottom" ngbTooltip="Typescript"></i>
+          <i class="devicon-amazonwebservices-plain" placement="bottom" ngbTooltip="Amazon Web Services"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="experience" id="experience">
+    <div class="section-header">
+      Experience
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-evenly start">
+      <div class="employment" fxFlex="50" fxLayout="column" fxLayoutAlign="space-evenly center">
+        <h4>Employment</h4>
+        <div class="job w100">
+          <div class="job-header" fxLayout="row" fxLayoutAlign="start center">
+            <fa name="building" size="lg"></fa>
+            <div class="title-section" fxFlex fxLayout="row" fxLayoutAlign="start center">
+              <div class="date">April 2010 - May 2010</div>
+              <div class="name"> Test Location</div>
+              <div class="job-title">Test Job Title</div>
+            </div>
           </div>
+          <ul>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+          </ul>
+          <div class="tools" fxLayout="row" fxLayoutAlign="start center">
+            <div class="tool-box language">HTML/CSS</div>
+            <span> | </span>
+            <div class="tool-box">HTML/CSS</div>
+          </div>
+        </div>
+      </div>
+      <div class="education" fxFlex="50" fxLayout="column" fxLayoutAlign="space-evenly center">
+        <h4>Education</h4>
+      </div>
     </div>
-    <div class="other-skills w100" fxLayout="row" fxLayoutAlign="space-evenly center">
-        <i class="devicon-github-plain-wordmark"></i>
-        <i class="devicon-heroku-original-wordmark"></i>
-        <i class="devicon-jquery-plain-wordmark"></i>
-        <i class="devicon-mongodb-plain-wordmark"></i>
-        <i class="devicon-nodejs-plain"></i>
-        <i class="devicon-bootstrap-plain-wordmark"></i>
-        <i class="devicon-java-plain-wordmark"></i>
-        <i class="devicon-swift-plain"></i>
-        <i class="devicon-visualstudio-plain"></i>
-        <i class="devicon-wordpress-plain-wordmark"></i>
-        <i class="devicon-sass-original"></i>
-        <i class="devicon-typescript-plain"></i>
-        <i class="devicon-ubuntu-plain-wordmark"></i>
+  </section>
+  <section class="portfolio charcoal" id="portfolio">
+    <div class="section-header">
+      Showcase
     </div>
-  </div>
-</section>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <!-- <img [src]="images[0]" alt="Random first slide"> -->
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <!-- <img [src]="images[1]" alt="Random second slide"> -->
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Random third slide">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <div class="other">
+      <h2 class="text-center">Other Projects</h2>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="section-header">
+      Contact
+    </div>
+  </section>
+</div>

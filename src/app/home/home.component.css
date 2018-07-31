@@ -7,7 +7,7 @@
 }
 
 .navbar {
-    background-color: black;
+    background-color: #101010;
     height: 40px;
     color: white;
 }
@@ -16,17 +16,19 @@
     text-decoration: none !important;
     color: white;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .section-header {
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     font-size: 30pt;
+    font-weight: 700;
 }
 
-.about {
-    padding: 100px 0px;
+.about, .experience, .portfolio, .contact {
+    padding: 75px 0px;
 }
 
 .ethic {
@@ -96,6 +98,85 @@
     padding-top: 50px;
 }
 
-.other-skills > i {
+.other-skills > h2 {
+    font-weight: 700;
+}
+
+.other-skills > div {
+    padding: 25px 0px;
+}
+
+.other-skills i {
     font-size: 60px;
+    padding: 10px 25px;
+    cursor: help;
+}
+
+.experience, .contact {
+    color: black;
+}
+
+.experience {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.title-section {
+    margin-left: 15px;
+}
+
+.date, .job-title {
+    white-space: nowrap;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-size: 14px;
+    background: #333;
+    border-bottom: solid 1px #aaa;
+    border-top: solid 1px #aaa;
+    font-weight: 700;
+}
+
+.name {
+    white-space: nowrap;
+    color: black;
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #BF1531;
+    border-bottom: solid 1px #aaa;
+    border-top: solid 1px #aaa;
+    font-weight: 700;
+}
+
+.job > ul {
+    margin-left: 25px;
+    margin-bottom: 0px;
+}
+
+.tools > span {
+    margin: 0px 3px;
+}
+
+.tool-box {
+    margin: 5px 2px;
+    white-space: nowrap;
+    background: #aaa;
+    color: black;
+    padding: 3px 7px;
+    border-radius: 2px;
+    background: #aaa;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    border: 1px solid #222;
+    font-size: 10px;
+}
+
+.language {
+    background: #777 !important;
+    color: white !important;
+}
+
+.portfolio .other {
+    margin-top: 50px;
 }
