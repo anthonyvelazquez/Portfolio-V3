@@ -9,6 +9,8 @@ export class HomeComponent implements OnInit {
 
   FixedNavbar: boolean = false;
   SaveNavbarPosition: number;
+  LoadLine2: boolean = false;
+  LoadLine3: boolean = false;
   @ViewChild("navbar") NavBarElement;
 
   constructor() { }
@@ -29,5 +31,18 @@ export class HomeComponent implements OnInit {
         this.FixedNavbar = false;
       }
     }
+
+  TypingComplete(line_number) {
+    switch(line_number) {
+      case 1:
+        this.LoadLine2 = true;
+        break;
+      case 2:
+        this.LoadLine3 = true;
+        break;
+      default:
+        break;
+    }
+  }
 
 }

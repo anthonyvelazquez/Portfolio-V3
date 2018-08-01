@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {ProgressBarModule} from "angular-progress-bar";
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { TypingAnimationModule } from 'angular-typing-animation'
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -24,7 +25,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ProgressBarModule,
     FormsModule,
     NgbModule.forRoot(),
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    TypingAnimationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

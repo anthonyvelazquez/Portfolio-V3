@@ -42,3 +42,15 @@ progress-bar {
 .text-center {
     text-align: center;
 }
+
+.line1 span {
+    font-size: 60px !important;
+}
+
+.line2 span {
+    font-size: 40px !important;
+}
+
+.line3 span {
+    font-size: 20px !important;
+}
