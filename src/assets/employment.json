@@ -1,0 +1,55 @@
+{
+    "jobs": [
+        {
+            "name": "Commoncents",
+            "url": "http://www.wobbow.com",
+            "time_frame": "May 2018 - Present",
+            "title": "Web Developer",
+            "summary": [
+                "Created an ecommerce website for their operations and sales",
+                "Integrated the website with their Royal4 Warehouse Management System through ODBC",
+                "Assisted in development of Amazon utilities like UPC Scrapers and Hazmat Scrapers for company use"
+            ],
+            "languages": [
+                "HTML/CSS",
+                "Javascript",
+                "Typescript",
+                "Bootstrap",
+                "Python",
+                "Django",
+                "Angular 6"
+            ],
+            "tools": [
+                "Git",
+                "Visual Code",
+                "AWS Elastic Beanstalk",
+                "ODBC"
+            ]
+        },
+        {
+            "name": "System On Grid",
+            "url": "http://www.systemongrid.com",
+            "time_frame": "April 2016 - May 2018",
+            "title": "Software Developer Intern",
+            "summary": [
+                "Created an internal customer support application with Django and Python",
+                "Converted Angular pages to static pages for better web crawling/SEO",
+                "Created guides on all the company's features for better customer support"
+            ],
+            "languages": [
+                "HTML/CSS",
+                "Javascript",
+                "JQuery",
+                "Bootstrap",
+                "Python",
+                "Django",
+                "AngularJS"
+            ],
+            "tools": [
+                "Git",
+                "Visual Code",
+                "Docker"
+            ]
+        }
+    ]
+}

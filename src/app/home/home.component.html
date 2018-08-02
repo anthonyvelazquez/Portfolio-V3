@@ -131,24 +131,22 @@
     <div fxLayout="row" fxLayoutAlign="space-evenly start">
       <div class="employment" fxFlex="50" fxLayout="column" fxLayoutAlign="space-evenly center">
         <h4>Employment</h4>
-        <div class="job w100">
+        <div class="job w100" *ngFor="let job of EmploymentList">
           <div class="job-header" fxLayout="row" fxLayoutAlign="start center">
             <fa name="building" size="lg"></fa>
             <div class="title-section" fxFlex fxLayout="row" fxLayoutAlign="start center">
-              <div class="date">April 2010 - May 2010</div>
-              <div class="name"> Test Location</div>
-              <div class="job-title">Test Job Title</div>
+              <div class="date">{{job.time_frame}}</div>
+              <div class="name"><a href="{{job.url}}" target="_blank">{{job.name}}</a></div>
+              <div class="job-title">{{job.title}}</div>
             </div>
           </div>
           <ul>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
+            <li *ngFor="let line of job.summary">{{line}}</li>
           </ul>
-          <div class="tools" fxLayout="row" fxLayoutAlign="start center">
-            <div class="tool-box language">HTML/CSS</div>
+          <div class="tools" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="tool-box language" *ngFor="let language of job.languages">{{language}}</div>
             <span> | </span>
-            <div class="tool-box">HTML/CSS</div>
+            <div class="tool-box" *ngFor="let tool of job.tools">{{tool}}</div>
           </div>
         </div>
       </div>
@@ -191,6 +189,7 @@
   <section class="contact" id="contact">
     <div class="section-header">
       Contact
+      <p *ngFor="let a of ProjectList">{{a.project_name}}</p>
     </div>
   </section>
 </div>

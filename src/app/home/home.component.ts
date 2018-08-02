@@ -1,4 +1,8 @@
 import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
+import * as ProjectFile from '../../assets/projects.json';
+import * as EmploymentFile from '../../assets/employment.json';
+import * as EducationFile from '../../assets/education.json';
+import * as ShowcaseFile from '../../assets/showcase.json';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +15,15 @@ export class HomeComponent implements OnInit {
   SaveNavbarPosition: number;
   LoadLine2: boolean = false;
   LoadLine3: boolean = false;
+  ProjectList: Array<any>;
+  EmploymentList: Array<any>;
   @ViewChild("navbar") NavBarElement;
 
   constructor() { }
 
   ngOnInit() {
+    this.ProjectList = ProjectFile["projects"];
+    this.EmploymentList = EmploymentFile["jobs"];
     this.SaveNavbarPosition = this.NavBarElement.nativeElement.offsetTop;
   }
 
