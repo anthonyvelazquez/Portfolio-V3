@@ -7,10 +7,10 @@
       <span class="text-center" typingAnimation [typeSpeed]="50" [hideCursorOnComplete]="true" [startDelay]="000" (complete)="TypingComplete(1)">Hello, my name is Anthony Velazquez</span>
     </div>
     <div class="text-overlay line2" fxLayout="row" fxLayoutAlign="center center">
-      <span class="text-center" typingAnimation [typeSpeed]="50" [hideCursorOnComplete]="true" [condition]="LoadLine2" (complete)="TypingComplete(2)">Hello, my name is Anthony Velazquez</span>
+      <span class="text-center" typingAnimation [typeSpeed]="50" [hideCursorOnComplete]="true" [condition]="LoadLine2" (complete)="TypingComplete(2)">I'm a Full-Stack Web and Software Developer</span>
     </div>
     <div class="text-overlay line3" fxLayout="row" fxLayoutAlign="center center">
-      <span class="text-center" typingAnimation [typeSpeed]="50" [hideCursorOnComplete]="false" [condition]="LoadLine3" (complete)="TypingComplete(3)">Hello, my name is Anthony Velazquez</span>
+      <span class="text-center" typingAnimation [typeSpeed]="50" [hideCursorOnComplete]="false" [condition]="LoadLine3" (complete)="TypingComplete(3)">Completing B.S. in Computer Science at William Paterson University</span>
     </div>
   </section>
   <div class="navbar w100" fxLayout="row" fxLayoutAlign="space-evenly center" [ngClass]="{'fixed': FixedNavbar}" #navbar>
@@ -37,21 +37,21 @@
             <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="desktop" size="3x"></fa></div>
           </div>
         <div class="title">Responsive</div>
-        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+        <div class="message">My layouts and designs will work on any device, big or small</div>
       </div>
       <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
           <div class="hexagon">
             <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="users" size="3x"></fa></div>
           </div>
         <div class="title">Intuitive</div>
-        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+        <div class="message">I always strive for functionality with simple and intuitive designs for users</div>
       </div>
       <div class="ethic" fxLayout="column" fxLayoutAlign="space-evenly center">
           <div class="hexagon">
             <div class="icon" fxLayout="row" fxLayoutAlign="space-evenly center"><fa name="rocket" size="3x"></fa></div>
           </div>
         <div class="title">Dynamic</div>
-        <div class="message">Fast loading times and lage free interaction, my highest priority</div>
+        <div class="message">Websites and software doesn't always statis. My goal is to make them come alive</div>
       </div>
     </div>
     <div class="info" fxLayout="column" fxLayoutAlign="space-evenly center">
@@ -182,14 +182,50 @@
         </div>
       </ng-template>
     </ngb-carousel>
-    <div class="other">
+    <div class="other" fxLayout="column" fxLayoutAlign="center center">
       <h2 class="text-center">Other Projects</h2>
+      <div class="card-list" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="card">
+
+        </div>
+        <div class="card">
+          
+          </div>
+          <div class="card">
+          
+            </div>
+      </div>
     </div>
   </section>
-  <section class="contact" id="contact">
-    <div class="section-header">
+  <section class="contact" id="contact" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div class="section-header" style="padding-bottom: 25px">
       Contact
       <p *ngFor="let a of ProjectList">{{a.project_name}}</p>
+    </div>
+    <div class="headline">
+      <h6>Have a question or want to work together?</h6>
+    </div>
+    <div class="contact-form">
+      <form action="" fxLayout="column" fxLayoutAlign="space-evenly center">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <section class="footer charcoal" id="footer" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div class="top-btn" fxLayout="column" fxLayoutAlign="space-evenly center">
+      <a [ngx-scroll-to]="'#home'"><fa name="angle-double-up" size="2x"></fa></a>
+    </div>
+    <div class="social-list" fxLayout="row" fxLayoutAlign="space-evenly center">
+      <a target="_blank" href="" fxLayout="column" fxLayoutAlign="center center"><fa name="facebook" size="2x"></fa></a>
+      <a target="_blank" href="" fxLayout="column" fxLayoutAlign="center center"><fa name="instagram" size="2x"></fa></a>
+      <a target="_blank" href="" fxLayout="column" fxLayoutAlign="center center"><fa name="linkedin" size="2x"></fa></a>
+      <a target="_blank" href="https://github.com/anthonyvelazquez/" fxLayout="column" fxLayoutAlign="center center"><fa name="github" size="2x"></fa></a>
+    </div>
+    <div class="copyright">
+      <p class="text-center">Anthony Velazquez © 2018</p>
     </div>
   </section>
 </div>
