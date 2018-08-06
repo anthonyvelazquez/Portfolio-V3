@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   LoadLine3: boolean = false;
   ProjectList: Array<any>;
   EmploymentList: Array<any>;
+  EducationList: Array<any>;
   @ViewChild("navbar") NavBarElement;
   closeResult: string;
 
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.ProjectList = ProjectFile["projects"];
     this.EmploymentList = EmploymentFile["jobs"];
+    this.EducationList = EducationFile["schools"];
     this.SaveNavbarPosition = this.NavBarElement.nativeElement.offsetTop;
   }
 

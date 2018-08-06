@@ -1,23 +1,27 @@
 {
-    "projects": [
+    "schools": [
         {
-            "name": "Test",
-            "description": "",
-            "url": "",
-            "images": [
-                "",
-                "",
-                ""
-            ],
-            "languages": [
-                "",
-                "",
-                ""
-            ],
-            "tools": [
-                "",
-                "",
-                ""
+            "name": "William Paterson University",
+            "url": "http://www.wobbow.com",
+            "time_frame": "Jan 2016 - Present",
+            "title": "Bachelor's Degree in C.S.",
+            "summary": [
+            ]
+        },
+        {
+            "name": "Bergen Community College",
+            "url": "http://www.wobbow.com",
+            "time_frame": "Jan 2014 - May 2015",
+            "title": "Associate's Degree in C.S.",
+            "summary": [
+            ]
+        },
+        {
+            "name": "Bergenfield High School",
+            "url": "https://www.bergenfield.org/bhs",
+            "time_frame": "Sept. 2009 - June 2012",
+            "title": "High School Diploma",
+            "summary": [
             ]
         }
     ]

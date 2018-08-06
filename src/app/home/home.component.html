@@ -152,6 +152,19 @@
       </div>
       <div class="education" fxFlex="50" fxLayout="column" fxLayoutAlign="space-evenly center">
         <h4>Education</h4>
+        <div class="job w100" *ngFor="let job of EducationList">
+          <div class="job-header" fxLayout="row" fxLayoutAlign="start center">
+            <fa name="graduation-cap" size="lg"></fa>
+            <div class="title-section" fxFlex fxLayout="row" fxLayoutAlign="start center">
+              <div class="date">{{job.time_frame}}</div>
+              <div class="name"><a href="{{job.url}}" target="_blank">{{job.name}}</a></div>
+              <div class="job-title">{{job.title}}</div>
+            </div>
+          </div>
+          <ul>
+            <li *ngFor="let line of job.summary">{{line}}</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -192,6 +205,15 @@
           
           </div>
           <div class="card" (click)="open(content)">
+          
+            </div>
+            <div class="card" (click)="open(content)">
+          
+            </div>
+            <div class="card" (click)="open(content)">
+          
+            </div>
+            <div class="card" (click)="open(content)">
           
             </div>
       </div>
@@ -257,7 +279,9 @@
       </ngb-carousel>
       <div class="separator w100"></div>
       <div class="info">
-        ss
+        <div class="title">Project Name</div>
+        <div class="tags">Sample Tag</div>
+        <div class="details">Sample blah blah</div>
       </div>
     </div>
   </ng-template>

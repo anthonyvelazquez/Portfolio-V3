@@ -111,6 +111,29 @@
 
 .info {
     padding: 50px 150px;
+    color: black;
+}
+
+.info .title {
+    font-size: 22pt;
+    line-height: 30pt;
+    font-family: 'Raleway-bold';
+}
+
+.info .tags {
+    display: block;
+    font-weight: 300;
+    color: #c0c0c0;
+    font-family: 'Raleway-bold';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+}
+
+.info .details {
+    font-size: 11pt;
+    line-height: 18pt;
+    margin-top: 15px;
+    padding: 15px 10px 85px 10px;
 }
 
 .bar-list > .bar-outline {
