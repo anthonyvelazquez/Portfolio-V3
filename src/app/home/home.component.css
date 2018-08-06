@@ -236,7 +236,22 @@
     height: 300px;
     border: 0;
     border-radius: 0px;
-    background: url("http://findmatthew.com/style/../img/thumb-3.jpg")
+    background: url("http://findmatthew.com/style/../img/thumb-3.jpg");
+    cursor: pointer;
+}
+
+.modal-body img{
+    width: 700px;
+    height: 450px;
+}
+
+.separator {
+    height: 4px;
+    background-color: black;
+}
+
+.info {
+    padding: 35px 25px;
 }
 
 .contact-form {

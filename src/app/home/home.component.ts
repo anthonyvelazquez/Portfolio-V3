@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import * as ProjectFile from '../../assets/projects.json';
 import * as EmploymentFile from '../../assets/employment.json';
 import * as EducationFile from '../../assets/education.json';
@@ -18,8 +19,9 @@ export class HomeComponent implements OnInit {
   ProjectList: Array<any>;
   EmploymentList: Array<any>;
   @ViewChild("navbar") NavBarElement;
+  closeResult: string;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit() {
     this.ProjectList = ProjectFile["projects"];
@@ -27,6 +29,23 @@ export class HomeComponent implements OnInit {
     this.SaveNavbarPosition = this.NavBarElement.nativeElement.offsetTop;
   }
 
+  open(content) {
+    this.modalService.open(content, {windowClass: 'project-modal', centered: true}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
 
   @HostListener('window:scroll', ['$event']) 
     scrollHandler(event) {
