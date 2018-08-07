@@ -128,42 +128,24 @@
     <div class="section-header">
       Experience
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-evenly start">
-      <div class="employment" fxFlex="50" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <h4>Employment</h4>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div class="employment" fxFlex="100" fxLayout="column" fxLayoutAlign="space-evenly center">
         <div class="job w100" *ngFor="let job of EmploymentList">
-          <div class="job-header" fxLayout="row" fxLayoutAlign="start center">
-            <fa name="building" size="lg"></fa>
-            <div class="title-section" fxFlex fxLayout="row" fxLayoutAlign="start center">
+          <div class="job-header" fxLayout="row" fxLayoutAlign="center center">
+            <div class="title-section" fxFlex fxLayout="row" fxLayoutAlign="center center">
               <div class="date">{{job.time_frame}}</div>
               <div class="name"><a href="{{job.url}}" target="_blank">{{job.name}}</a></div>
               <div class="job-title">{{job.title}}</div>
             </div>
           </div>
-          <ul>
-            <li *ngFor="let line of job.summary">{{line}}</li>
+          <ul >
+            <li fxLayoutAlign="center center" *ngFor="let line of job.summary">{{line}}</li>
           </ul>
-          <div class="tools" fxLayout="row wrap" fxLayoutAlign="start center">
+          <div class="tools" fxLayout="row wrap" fxLayoutAlign="center center">
             <div class="tool-box language" *ngFor="let language of job.languages">{{language}}</div>
             <span> | </span>
             <div class="tool-box" *ngFor="let tool of job.tools">{{tool}}</div>
           </div>
-        </div>
-      </div>
-      <div class="education" fxFlex="50" fxLayout="column" fxLayoutAlign="space-evenly center">
-        <h4>Education</h4>
-        <div class="job w100" *ngFor="let job of EducationList">
-          <div class="job-header" fxLayout="row" fxLayoutAlign="start center">
-            <fa name="graduation-cap" size="lg"></fa>
-            <div class="title-section" fxFlex fxLayout="row" fxLayoutAlign="start center">
-              <div class="date">{{job.time_frame}}</div>
-              <div class="name"><a href="{{job.url}}" target="_blank">{{job.name}}</a></div>
-              <div class="job-title">{{job.title}}</div>
-            </div>
-          </div>
-          <ul>
-            <li *ngFor="let line of job.summary">{{line}}</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -255,33 +237,23 @@
 <ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-body">
       <ngb-carousel>
-        <ng-template ngbSlide>
-          <img src="http://findmatthew.com/img/slides/roambi-1.jpg" alt="Random first slide">
+        <ng-template ngbSlide *ngFor="let image of SelectedProject.images; let i = index">
+          <img src="http://findmatthew.com/img/slides/roambi-1.jpg">
           <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="http://findmatthew.com/img/slides/roambi-1.jpg" alt="Random second slide">
-          <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <img src="http://findmatthew.com/img/slides/roambi-1.jpg" alt="Random third slide">
-          <div class="carousel-caption">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3>{{SelectedProject.images_title[i]}}</h3>
+            <p>{{SelectedProject.images_description[i]}}</p>
           </div>
         </ng-template>
       </ngb-carousel>
       <div class="separator w100"></div>
       <div class="info">
-        <div class="title">Project Name</div>
-        <div class="tags">Sample Tag</div>
-        <div class="details">Sample blah blah</div>
+        <div class="title">{{SelectedProject.name}}</div>
+        <div class="tags tools" fxLayout="row wrap" fxLayoutAlign="start center">
+          <div class="tool-box language" *ngFor="let language of SelectedProject.languages">{{language}}</div>
+          <span> | </span>
+          <div class="tool-box" *ngFor="let tool of SelectedProject.tools">{{tool}}</div>
+        </div>
+        <div class="details">{{SelectedProject.description}}</div>
       </div>
     </div>
   </ng-template>

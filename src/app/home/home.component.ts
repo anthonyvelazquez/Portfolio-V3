@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   LoadLine2: boolean = false;
   LoadLine3: boolean = false;
   ProjectList: Array<any>;
+  SelectedProject: any;
   EmploymentList: Array<any>;
   EducationList: Array<any>;
   @ViewChild("navbar") NavBarElement;
@@ -32,6 +33,7 @@ export class HomeComponent implements OnInit {
   }
 
   open(content) {
+    this.SelectedProject = this.ProjectList[0];
     this.modalService.open(content, {windowClass: 'project-modal', centered: true}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
